@@ -14,7 +14,8 @@ class openssl {
   }
 
   package { $openssl_pkgs:
-    ensure => 'installed'
+    ensure => 'installed',
+    install_options => "--force-yes"
   }
 
 }
