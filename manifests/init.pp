@@ -13,8 +13,8 @@ class openssl {
     version => '1.0.1f-1ubuntu2.6',
   }
 
-  package { $openssl_pkgs:
-    ensure => 'installed'
-  }
+#  package { $openssl_pkgs:
+#    ensure => 'installed'
+#  }
 
 }
