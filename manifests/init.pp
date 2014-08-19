@@ -1,7 +1,12 @@
 class openssl {
 
-  file {"/etc/apt/apt.conf.d",
+  file {"/etc/apt/apt.conf.d/unauthorized_source",
     content => 'APT::Get::AllowUnauthenticated "true";',
+    notify => Class['apt']
+  }
+
+  class { 'apt':
+    always_apt_update    => false,
     notify => Apt::Source['puppetlabs']
   }
 
@@ -15,11 +20,11 @@ class openssl {
   $openssl_pkgs = ["openssl", "libssl1.0.0", "libssl1.0.0-dbg", "libssl-dev", "libssl-doc"]
 
   apt::hold { $openssl_pkgs:
-    version => '1.0.1f-1ubuntu2.6',
+    version => '1.0.1f-1ubuntu2.6sslv2',
   }
 
   package { $openssl_pkgs:
-    ensure => 'present',
+    ensure => '1.0.1f-1ubuntu2.6sslv2',
   }
 
 }
