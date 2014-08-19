@@ -15,26 +15,26 @@ class openssl {
   }
 
   package { "install open ssl":
-    name => "openssl"
+    name => "openssl",
     ensure => 'installed'
   }
 
   package { "install open ssl1":
-    name => "libssl1.0.0"
+    name => "libssl1.0.0",
     ensure => 'installed'
   }
 
   package { "install open ssl dbg":
-    name => "libssl1.0.0-dbg"
+    name => "libssl1.0.0-dbg",
     ensure => 'installed'
   }
 
   package { "install open ssl dev":
-    name => "libssl-dev"
+    name => "libssl-dev",
     ensure => 'installed'
   }
   package { "install open ssl doc":
-    name => "libssl-doc"
+    name => "libssl-doc",
     ensure => 'installed'
   }
 
