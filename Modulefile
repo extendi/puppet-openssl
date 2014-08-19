@@ -1,0 +1,7 @@
+name "puppetlabs-openssl"
+version "0.0.1"
+source "git://github.com/alessani/puppet-openssl"
+author "Matteo Alessani"
+license "Apache"
+summary "Manage openssl with SSLv2"
+description "Manage openssl with SSLv2"
