@@ -1,6 +1,6 @@
 class openssl {
 
-  file {"/etc/apt/apt.conf.d/unauthorized_source",
+  file {"/etc/apt/apt.conf.d/unauthorized_source":
     content => 'APT::Get::AllowUnauthenticated "true";',
     notify => Class['apt']
   }
